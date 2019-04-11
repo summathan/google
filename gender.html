@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>forms</title>
+    </head>
+<body>
+<form>
+    <input type="text" id="text" maxlength="10" >
+    <br><br>
+    <input type="password" id="pwd" maxlength="10">
+    <br><br>
+    <input type="radio" id="v1" name="gender" value="male">male
+    <input type="radio" id="v2" name="gender" value="female">female
+    <input type="button" id="button1" value="submit" onclick="hi()">
+    </form>
+<script>
+    function hi()
+    {
+    var uid=document.getElementById("text").value;
+    var pass=document.getElementById("pwd").value;
+    var gender=document.getElementsByName("gender");
+    var gen1;
+    for (var i=0; i<gender.length; i++)
+    {
+    if (gender[i].checked)
+    {
+    gen1=gender[i].value;
+    }
+    }
+    if(uid==pass)
+    {
+    document.write("welcome  "+uid+"gender  "+gen1);
+    }
+    }
+</script>  
+</body>
+</html>
